@@ -1,0 +1,22 @@
+{
+  "name": "nds",
+  "version": "1.0.0",
+  "description": "Projeto criado a fins de estudo",
+  "main": "./src/js/main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "webpack --mode=development --config config/webpack.config.js --watch",
+    "build": "webpack --mode=production --config config/webpack.config.js"
+  },
+  "author": "Joao",
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/core": "^7.10.5",
+    "@babel/preset-env": "^7.10.4",
+    "babel-loader": "^8.1.0",
+    "ts-loader": "^8.0.1",
+    "typescript": "^3.9.7",
+    "webpack": "^4.43.0",
+    "webpack-cli": "^3.3.12"
+  }
+}

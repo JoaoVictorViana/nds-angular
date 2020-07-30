@@ -1,0 +1,16 @@
+<div class="ui container containerPrincipal segment" id="containerToInformations">
+    <div>Teste Para o git</div>
+    
+    <div *ngIf="contentContainer; then content; else notContent"></div>
+
+    <ng-template #content>
+        <span> Oláaa!</span>
+        <p>{{contentContainer}}</p>
+    </ng-template>
+
+    <ng-template #notContent>
+        <span> Bem vindo cara!</span>
+        <p>Aqui é a home!</p>
+    </ng-template>
+
+</div>
