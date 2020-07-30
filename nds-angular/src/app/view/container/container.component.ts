@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { Page } from 'src/app/interface/page';
 
 @Component({
   selector: 'nds-container',
@@ -7,7 +8,7 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class ContainerComponent implements OnInit {
 
-  @Input('content') contentContainer: string;
+  @Input('content') contentContainer: Page;
 
   constructor() { }
 

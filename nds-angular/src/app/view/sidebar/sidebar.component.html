@@ -1,8 +1,8 @@
 <div class="ui grid">
     <div class="ui sidebar vertical left menu overlay visible" style="-webkit-transition-duration: 0.1s; overflow:visible !important; overflow-y: auto !important; background-color: #006D44 !important;" id="sidebarMobile">
         <div class="ui accordion">
-            <a (click)="changeContainer(menu)" class="item notContent" *ngFor="let menu of menusPainel">
-                <p class="pTitle"><i class="home layout icon"></i><span id="textDrop">{{menu}}</span></p>
+            <a (click)="changeContainer(menu.page)" class="item notContent" *ngFor="let menu of menusPainel">
+                <p class="pTitle"><i class="{{menu.icon}} layout icon"></i><span id="textDrop">{{menu.title}}</span></p>
             </a>
         </div>
     </div>

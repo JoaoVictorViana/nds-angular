@@ -1,4 +1,9 @@
 import { Component, OnInit, Output } from '@angular/core';
+import { Menu } from '../../interface/menu';
+import { Page } from '../../interface/page';
+import { voltarPage } from '../page/voltar';
+import { paginaInicialPage } from '../page/paginainicial';
+import { pessoaPage } from '../page/pessoa';
 
 @Component({
   selector: 'nds-painel',
@@ -7,22 +12,19 @@ import { Component, OnInit, Output } from '@angular/core';
 })
 export class PainelComponent implements OnInit {
 
-  menus: string[];
-  content: string;
+  menus: Menu[];
+  content: Page;
 
   constructor() { }
 
   ngOnInit(): void {
     this.menus = [];
-    this.menus.push('Voltar');
-    this.menus.push('Pagina Inicial');
-    this.menus.push('Pessoa');
-    this.menus.push('Cadastro');
-    this.menus.push('Ajuda');
-    this.menus.push('Perfil');
+    this.menus.push({title: 'Voltar', icon: 'pencil', page: voltarPage});
+    this.menus.push({title: 'Pagina Inicial', icon: 'home', page: paginaInicialPage});
+    this.menus.push({title: 'Pessoa', icon: 'pencil', page: pessoaPage});
   }
 
-  receberMensagem(event: Event): void {
-    this.content = `${event}`;
+  receberMensagem(event: Page): void {
+    this.content = event;
   }
 }

@@ -1,4 +1,6 @@
 import { Component, OnInit, Input, EventEmitter, Output } from '@angular/core';
+import { Page } from 'src/app/interface/page';
+import { Menu } from 'src/app/interface/menu';
 
 @Component({
   selector: 'nds-sidebar',
@@ -7,18 +9,17 @@ import { Component, OnInit, Input, EventEmitter, Output } from '@angular/core';
 })
 export class SidebarComponent implements OnInit {
 
-  @Input('menus') menusPainel: string[];
+  @Input('menus') menusPainel: Menu[];
   
-  @Output('response') response: EventEmitter<string> = new EventEmitter<string>();
+  @Output('response') response: EventEmitter<Page> = new EventEmitter<Page>();
 
   constructor() { }
 
   ngOnInit(): void {
-    
   }
 
-  changeContainer(menu: string): void {
-    let mensagem: string = `O menu (${menu}) foi clickado!`;
+  changeContainer(page: Page): void {
+    let mensagem: Page = page;
     this.response.emit(mensagem);
   }
 

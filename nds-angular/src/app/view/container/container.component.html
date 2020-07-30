@@ -1,11 +1,8 @@
-<div class="ui container containerPrincipal segment" id="containerToInformations">
-    <div>Teste Para o git</div>
-    
+<div class="ui container containerPrincipal segment" id="containerToInformations">    
     <div *ngIf="contentContainer; then content; else notContent"></div>
 
     <ng-template #content>
-        <span> Oláaa!</span>
-        <p>{{contentContainer}}</p>
+        <div [innerHTML]="contentContainer.template"></div>
     </ng-template>
 
     <ng-template #notContent>
